@@ -21,3 +21,14 @@ def convert_currency(amount, from_currency, to_currency, exchange_rates):
         print("Sorry. Your currency codes are invalid.")
         return None
 
+# receive user input
+if exchange_rates:    
+    amount = float(input("Enter amount: "))
+    from_currency = input("Enter currency you want to convert from: ").upper()
+    to_currency = input("Enter currency you want to convert to: ").upper()
+
+    final_output = convert_currency(amount, from_currency, to_currency, exchange_rates)
+
+    if final_output is not None:
+        print(f"{amount} {from_currency} is equal to {final_output:.2f} {to_currency}")
+
